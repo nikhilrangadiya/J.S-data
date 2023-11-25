@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in loop</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let user = ["nikhil", "raj"]
+
+        let userall = [
+            {
+                name: "nikhil",
+                age: 19
+            },
+            {
+                name: "raj",
+                age: 20
+            }
+        ]
+        console.log(user[0]);
+
+        let a = {
+            name: "nikhil",
+            age: 19
+        }
+
+        console.log(a);
+
+        let b = a
+
+        console.log(a[0]);
+
+        for (let obj in a) {
+            //     // console.log(a + obj[a]);
+            //     // console.log(obj + a[obj]);
+            console.log(obj + a[obj]);
+        }
+
+        for (let index = 0; index < userall.length; index++) {
+            // const element = array[index];
+            console.log(userall[index]);
+            
+        }
+    </script>
+</body>
+
+</html>
