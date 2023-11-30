@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation</title>
+</head>
+
+<body>
+
+    <form onsubmit="return validation()">
+        <table>
+            <tr>
+                <td><label for="username">username</label></td>
+                <td><input type="text" id="username"></td>
+                <td><span id="userer"> </span></td>
+            </tr>
+            <tr>
+                <td><label for="password">password</label></td>
+                <td><input type="password" id="password"></td>
+                <td><span id="passer"> </span></td>
+            </tr>
+            <tr>
+                <td><label for="number">mobile number</label></td>
+                <td><input type="number" id="number"></td>
+                <td><span id="numer"> </span></td>
+            </tr>
+            <tr>
+                <td><label for="emailid">email-id</label></td>
+                <td><input type="emailid" id="emailid"></td>
+                <td><span id="email"> </span></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="login"></td>
+            </tr>
+        </table>
+    </form>
+
+
+
+    <script>
+
+        function demo() {
+            console.log("demo of onclick");
+            // return false
+        }
+
+        let username = document.getElementById("username")
+        let password = document.getElementById("password")
+        let number = document.getElementById("number")
+        let emailid = document.getElementById("emailid")
+        let userer = document.getElementById("userer")
+        let passer = document.getElementById("passer")
+        let numer = document.getElementById("numer")
+
+        console.log(password, username, userer, passer, numer, email);
+
+        function validation() {
+            console.log(validation);
+            console.log(username.value);
+
+            if (username.value === "") {
+                console.log("enter your username for login ");
+                userer.innerHTML = "enter your username for login "
+            }
+            else {
+                userer.innerHTML = ""
+            }
+
+            if (password.value === "") {
+                passer.innerHTML = "enter your password for login"
+            }
+            else if (password.value.length < 8)
+                // console.log("0");
+                passer.innerHTML = "max 8 char"
+            else {
+                passer.innerHTML = ""
+            }
+
+            if (number.value === ""){
+                numer.innerHTML = "enter your mobile number for login"
+            }
+            else {
+                numer.innerHTML = ""
+
+            }
+            if (emailid.value === ""){
+                email.innerHTML = "enter your email-id for login"
+            }
+            else {
+                email.innerHTML = ""
+
+            }
+            return false
+
+        }
+    </script>
+
+</body>
+
+</html>
