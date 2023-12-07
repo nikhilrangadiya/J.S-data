@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto slider</title>
+
+    <style>
+        img{
+            width: 100%;
+
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <img src="../photos/1.avif" class="slid-img" alt="">
+        <img src="../photos/2.avif" class="slid-img" alt="">
+        <img src="../photos/3.avif" class="slid-img" alt="">
+        <img src="../photos/4.avif" class="slid-img" alt="">
+        <img src="../photos/5.avif" class="slid-img" alt="">
+        <img src="../photos/6.avif" class="slid-img" alt="">
+        <img src="../photos/7.jpg"  class="slid-img" alt="">
+        <img src="../photos/8.jpg"  class="slid-img" alt="">
+        <img src="../photos/9.jpg"  class="slid-img" alt="">
+        <img src="../photos/10.jpg"  class="slid-img" alt="">
+    </section>
+    
+
+    <script>
+        
+
+        let sliderdata = document.getElementsByClassName("slid-img")
+        console.log(sliderdata);
+        let count = 0
+
+        function slider(){
+            for (let index = 0; index < sliderdata.length; index++){
+                console.log(sliderdata[index]);
+                sliderdata[index].style.display = "none"
+            }
+            if (count >= sliderdata.length){
+                count = 0
+            }
+            console.log(count);
+            sliderdata[count].style.display = "block"
+            count++
+
+            setTimeout(slider , 2000)
+
+        }
+        slider()
+
+
+    </script>
+</body>
+</html>

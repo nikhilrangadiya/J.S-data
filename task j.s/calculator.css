@@ -1,0 +1,55 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.solid{
+    border: solid 2px black;
+    width: 30%;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.main h1{
+    text-align: center;
+    padding: 5px 0px 15px 0px ;
+}
+.end h1{
+    text-align: center;
+    padding: 0px 0px 20px 0px;
+}
+.enter1 p {
+    padding: 5px 0px ;
+    font-size: 20px;
+}
+.enter2 p {
+    padding: 5px 0px 20px 0px;
+    font-size: 20px;
+}
+.btn1 ,.btn3 ,.btn4 {
+    padding: 2px 20px;
+    font-size: 25px;
+}
+.btn2{
+    padding: 2px 22px;
+    font-size: 25px;
+}
+.btn5{
+    padding: 2px 15px ;
+    font-size: 25px;
+}
+.btn1:hover{
+    background-color: #fff;
+}
+.btn2:hover{
+    background-color: #fff;
+}
+.btn3:hover{
+    background-color: #fff;
+}
+.btn4:hover{
+    background-color: #fff;
+}
+.btn5:hover{
+    background-color: #fff;
+}

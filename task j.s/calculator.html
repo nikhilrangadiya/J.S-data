@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="./calculator.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script> -->
+
+</head>
+
+<body>
+
+    <section>
+        <div class="solid">
+            <div class="main">
+                <h1>MAths Operations</h1>
+            </div>
+            <table class="table">
+                <tr>
+                    <!-- <col-50> -->
+                    <td>
+                        <div class="enter1">
+                            <p> Enter 1 st number :</p>
+                        </div>
+                    </td>
+                    <td>
+                        <label name="first"></label>
+                        <input type="number" id="first" placeholder="">
+                    </td>
+                    <!-- </col-50> -->
+                </tr>
+
+                <tr>
+                    <!-- <col-50> -->
+                    <td>
+                        <div class="enter2">
+                            <p> Enter 2 st number :</p>
+                        </div>
+                    </td>
+                    <td>
+                        <label name="second"></label>
+                        <input type="number" id="second" placeholder="">
+                    </td>
+                    <!-- </col-50> -->
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" onclick="addition()" id="add" value="+" class="btn1">
+                        <input type="button" onclick="subtraction()" id="sub" value="-" class="btn2">
+                        <input type="button" onclick="multiplication()" id="mul" value="*" class="btn3">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" id="div" onclick="divide()" value="/" class="btn4">
+                        <input type="button" id="mod" onclick="modulus()" value="%" class="btn5">
+                    </td>
+                    <td>
+                        <div class="end">
+                            <h1>Answer is :<span style="color: blue;" id="result"></span> </h1>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </section>
+
+    <script src="./calculator.js"></script>
+
+</body>
+
+</html>
