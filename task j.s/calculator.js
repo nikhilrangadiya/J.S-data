@@ -40,10 +40,21 @@ function divide() {
 }
 
 // Function to perform modulus
+// function modulus() {
+//     let [num1, num2] = getInputValues();
+//     if (num2 !== 0) {
+//         updateResult(num1 % num2);
+//     } else {
+//         updateResult("Cannot calculate modulus with zero.");
+//     }
+// }
+
+ // Function to perform modulus
 function modulus() {
     let [num1, num2] = getInputValues();
     if (num2 !== 0) {
-        updateResult(num1 % num2);
+        let modulus = (num1 / num2) * 100;
+        updateResult(modulus);
     } else {
         updateResult("Cannot calculate modulus with zero.");
     }
