@@ -34,12 +34,12 @@
         <img src="../photos/2.avif" class="img" alt="">
         <img src="../photos/3.avif" class="img" alt="">
         <img src="../photos/4.avif" class="img" alt="">
-        <img src="../photos/5.avif" class="img" alt="">
+        <!-- <img src="../photos/5.avif" class="img" alt="">
         <img src="../photos/6.avif" class="img" alt="">
         <img src="../photos/7.jpg"  class="img" alt="">
         <img src="../photos/8.jpg"  class="img" alt="">
         <img src="../photos/9.jpg"  class="img" alt="">
-        <img src="../photos/10.jpg"  class="img" alt="">
+        <img src="../photos/10.jpg"  class="img" alt=""> -->
     </section>
     <div class="nav">
         <button onclick="goPrew()">Prew</button>
@@ -68,16 +68,25 @@
             }
         )
         }
-         
+        
         goPrew = () => {
-            console.log(goPrew);
-            slideimg()
             count--
+            console.log(goPrew);
+            if (count === -1) {
+                count = 3
+            }
+            slideimg()
         }
         goNext = () => {
-            console.log(goNext);
-            slideimg()
             count++
+            console.log(goNext);
+            // if (count === 4) {
+            //     count = 0
+            // }
+            if (count >= sliderdata.length){
+                count = 0
+            }
+            slideimg()
         }
     </script>
 </body>
