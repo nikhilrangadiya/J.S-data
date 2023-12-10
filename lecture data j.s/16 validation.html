@@ -53,6 +53,7 @@
         let userer = document.getElementById("userer")
         let passer = document.getElementById("passer")
         let numer = document.getElementById("numer")
+        // let count = 1
 
         console.log(password, username, userer, passer, numer, email);
 
@@ -63,37 +64,61 @@
             if (username.value === "") {
                 console.log("enter your username for login ");
                 userer.innerHTML = "enter your username for login "
+                // count = 0
+                event.preventDefault()
             }
             else {
                 userer.innerHTML = ""
+                // count = 1
             }
 
             if (password.value === "") {
                 passer.innerHTML = "enter your password for login"
+                // count = 0
+                event.preventDefault()
+
             }
             else if (password.value.length < 8)
                 // console.log("0");
                 passer.innerHTML = "max 8 char"
+                // count = 0
+                
+
             else {
                 passer.innerHTML = ""
+                // count = 1
             }
 
             if (number.value === ""){
                 numer.innerHTML = "enter your mobile number for login"
+                // count = 0
+                event.preventDefault()
+
             }
             else {
                 numer.innerHTML = ""
+                // count = 1
 
             }
             if (emailid.value === ""){
                 email.innerHTML = "enter your email-id for login"
+                // count = 0
+                event.preventDefault()
+
+
             }
             else {
                 email.innerHTML = ""
+                // count = 1
 
             }
-            return false
 
+            // if(count) {
+            //     return true
+            // }
+            // else{
+            //     return false
+            // }
         }
     </script>
 
