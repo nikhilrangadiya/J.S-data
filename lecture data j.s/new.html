@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+</head>
+<body>
+  <div id="passwords-container"></div>
+
+  <script>
+    function generatePassword() {
+      const length = 14; // You can adjust the length of the password
+      const specialCharacters = '!@#$%^&*()_+{}[]|;:,.<>?'; // Special characters to choose from
+      const specialCharPositions = [2, 5, 8]; // Positions to replace with special characters
+      const numberPosition = 10; // Position to replace with a number
+
+      const getRandomInt = (max) => Math.floor(Math.random() * max);
+      const getRandomUppercaseLetter = () => String.fromCharCode(getRandomInt(26) + 65);
+      const getRandomLowercaseLetter = () => String.fromCharCode(getRandomInt(26) + 97);
+      const getRandomDigit = () => getRandomInt(10);
+      const getRandomSpecialChar = () => specialCharacters[getRandomInt(specialCharacters.length)];
+      
+      let password = "";
+
+      for (let i = 0; i < length; i++) {
+        if (specialCharPositions.includes(i)) {
+          password += getRandomSpecialChar();
+        } else if (i === numberPosition) {
+          password += getRandomDigit();
+        } else {
+          // Use lowercase letters for other positions
+          password += getRandomLowercaseLetter();
+        }
+      }
+
+      return password;
+    }
+
+    // Display 10 passwords in the HTML document
+    const passwordsContainer = document.getElementById('passwords-container');
+    for (let i = 1; i <= 10; i++) {
+      const password = generatePassword();
+      passwordsContainer.innerHTML += `<p>Password ${i}: ${password}</p>`;
+    }
+  </script>
+</body>
+</html>
