@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>prepannd</title>
+    <title>appand</title>
     <style>
         #box{
             background-color: burlywood;
             width: 600px;
         }
     </style>
-          <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
 </head>
 <body>
@@ -24,14 +23,12 @@
      <button id="appand">
         appand
      </button>
-     <button id="prepannd">prepannd</button>
+
+     <script src="./jquery-3.7.1.min.js"></script>
 
     <script>
-        $('#appand').click(function () {
+        $('#appand').one("click" ,function () {
             $('#box').append('<h2> name </h2>')
-        })
-        $('#prepannd').click(function () {
-            $('#box').prepend('<h2> name </h2>')
         })
     </script>
     

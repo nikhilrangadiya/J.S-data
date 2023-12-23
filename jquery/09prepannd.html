@@ -4,31 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>before</title>
+    <title>prepannd</title>
     <style>
         #box{
-            background-color: rgb(230, 136, 5);
+            background-color: burlywood;
             width: 600px;
-            color: aliceblue;
         }
     </style>
-      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
 </head>
 <body>
-    
+
     <div id="box">
         <h1>after add</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus temporibus exercitationem provident adipisci nam quam quia, culpa consequatur voluptas animi tempora cum quidem officiis quo eligendi, minima, sed molestias sint!
         </p>
     </div>
+     <button id="appand">
+        appand
+     </button>
+     <button id="prepannd">prepannd</button>
 
-    <button id="before">before btn</button>
+     <script src="./jquery-3.7.1.min.js"></script>
+
     <script>
-
-        let name = "nikhil"
-        $('#before').one("click" ,function(){
-            $('#box').before(name)
+        $('#appand').click(function () {
+            $('#box').append('<h2> name </h2>')
+        })
+        $('#prepannd').click(function () {
+            $('#box').prepend('<h2> name </h2>')
         })
     </script>
+    
 </body>
 </html>
