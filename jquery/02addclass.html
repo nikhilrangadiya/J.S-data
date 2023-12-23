@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addclass</title>
+    <style>
+        #box{
+            width: 600px;
+            margin: 0 auto;
+            border: solid 2px ;
+            transition: 2s;
+
+        }
+
+        button{
+            display: block;
+            margin: 0  auto;
+        }
+
+        .bg{
+            background-color: crimson;
+            color: aliceblue;
+        }
+
+        .padding{
+            padding: 50px;
+        }
+
+        .font{
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div id="box">
+        <h1>jquery</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam accusantium et maxime nemo doloremque necessitatibus excepturi, beatae at, atque expedita, ea perspiciatis cum itaque provident eligendi commodi rem magni libero.</p>
+    </div>
+
+    <button id="addclass"> addclass</button>
+
+    <script src="./jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#addclass").click(function(){
+            $("#box").addClass( "bg padding font")
+            })
+        })
+    </script>
+</body>
+</html>

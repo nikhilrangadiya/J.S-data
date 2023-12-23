@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hasclass</title>
+    <style>
+        #box {
+            width: 600px;
+            margin: 0 auto;
+            border: solid 2px;
+            transition: 2s;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+
+        }
+
+        .bg {
+            background-color: crimson;
+            color: aliceblue;
+        }
+
+        .class {
+            padding: 100px;
+        }
+
+        /* .font{
+            font-size: 20px;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div id="box" class="bg ">
+        <h1>jquery</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem expedita corporis nobis praesentium,
+            obcaecati aliquam sint accusantium dignissimos maxime dolor, iure modi maiores ipsa sequi autem facilis
+            dolorem rem voluptas.</p>
+    </div>
+
+    <button id="hasclass"> hasclass</button>
+    <!-- <button id="my-btn"> my-btn</button> -->
+
+
+    <script src="./jquery-3.7.1.min.js"></script>
+
+    <script>
+        // $(document).ready(function(){
+        //     $("#hasclass").click(function(){
+        //         $("#box").hasClass(" bg class font")
+        //     })
+        // })
+        $(document).ready(function () {
+            $("#hasclass").click(function () {
+                console.log($('#box').hasClass("bg"))
+            });
+            $("#hasclass").click(function(){
+                $("#box").toggleClass("bg")
+            })
+        })
+            // let x = $('#box').hasclass('bg')
+
+            // if (x == true){
+            //     console.log('good');
+            // }
+            // else{
+            //     console.log('faill');
+            // }
+        // });
+    </script>
+
+</body>
+
+</html>

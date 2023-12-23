@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* div {
+            width: 600px;
+
+        } */
+
+        #box {
+            background-color: darkgoldenrod;
+        }
+
+        #box2 {
+            background-color: rgb(184, 11, 11);
+        }
+        .col-50{
+            width: 50%;
+            border: solid 2px;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+</head>
+
+<body>
+
+    <div id="box">
+        <h1> Lorem ipsum dolor sit amet. </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque laudantium distinctio dolore officiis.
+            Deserunt iusto sapiente repellat tenetur nisi. Impedit quidem fuga iusto ullam fugiat tenetur aperiam
+            officiis aut neque!</p>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+    </div>
+
+
+
+    <div id="box2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ipsam. Mollitia aut obcaecati eaque iste!
+            Asperiores dicta fuga molestias architecto fugiat, dolore dolorum? Quia in laborum iure quasi eum sunt.</p>
+    </div>
+
+
+    <section>
+        <div class="row">
+            <div class="col-50">
+                <h1>data</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam assumenda debitis obcaecati culpa atque quisquam laborum commodi accusamus. Sunt id facere corporis at nulla. Nam odio fugiat ipsa labore esse?</p>
+                <button>add cart</button>
+            </div>
+            <div class="col-50">
+                <h1>data</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam assumenda debitis obcaecati culpa atque quisquam laborum commodi accusamus. Sunt id facere corporis at nulla. Nam odio fugiat ipsa labore esse?</p>
+                <button>add cart</button>
+            </div>
+        </div>
+    </section>
+
+    <button id="cln">clone</button>
+
+    <script>
+        // $(document).ready(function () {
+        //     $('#cln').click(function () {
+        //         $('#box h2').clone().prependTo('#box2')
+        //     });
+        // })
+
+        $("#cln").click(function(){
+            $("body .row").clone().appendTo(".row")
+        })
+    </script>
+</body>
+
+</html>

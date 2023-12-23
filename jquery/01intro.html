@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h1 id="head">
+        jquery
+    </h1>
+
+    <!-- <button onclick="color()">add color</button> -->
+    <button id="btn">add color</button>
+
+    <!-- <script>
+        let head = document.getElementById("head")
+        console.log(head);
+
+        function color(){
+            head.style.color = "red"
+        }
+    </script> -->
+
+    <script src="./jquery-3.7.1.min.js"></script>
+
+
+    <script>
+
+        $(document).ready(function (){
+             $("#btn").click(function(){
+                $("#head").addClass("color")
+                // $("#head").hide() 
+             })
+        })
+    </script>
+ 
+
+</body>
+</html>
