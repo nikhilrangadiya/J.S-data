@@ -4,6 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css</title>
+    <style>
+        div{
+            height: 50px;
+            margin: 5px;
+            padding: 5px;
+            border: 10px solid hotpink;
+            float: left;
+        }
+
+        #box1{
+            width: 50px;
+            color: yellow;
+            background-color: blue;
+        }
+
+        #box2{
+            width: 50px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(15 , 99 , 30);
+
+        }
+
+        #box3{
+            width: 50px;
+            color: #fcc;
+            background-color: #123456;
+        }
+
+        #box4{
+            width: 50px;
+            background-color: #f11;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,6 +47,29 @@
     <div id="box4">4</div>
 
     <script src="./jquery-3.7.1.min.js"></script>
+
+    <script>
+        $("div").click(function(){
+            var data = ["the clicked div has the following styles:"];
+            var styleprops = $(this).css([
+                "width", "height", "color", "margin", "padding", "background-color", "border"
+            ]);
+            $(this).css("color", "green") //get color of this ele
+            $(this).css("background-color", "red") //set red color for thid element
+            console.log(styleprops);
+
+            //return false
+
+            $.each(styleprops, function (prop, value){
+                data.push(prop + ";" + value);
+                console.log(prop , value);
+            });
+
+            // console.log(html);
+
+            $("#result").html(data.join("<hr>"));
+        });
+    </script>
     
 </body>
 </html>
