@@ -1,0 +1,51 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                transition: 4s;
+            }
+            #box p{
+                background-color: darkgoldenrod;
+
+            }
+        </style>
+            <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    </head>
+    <body>
+        
+        <div id="box">
+        <h1 class="heading"> add css in html using jquery</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, esse?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, esse?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, esse?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, esse?</p>
+    </div>
+
+    <button id="add-css">
+        add css
+    </button>
+
+    <script>
+        $("#add-css").click(function(){
+            $('body').css({
+            "background-color":"red",
+            "color": "red",
+            "margin-left": "200px",
+            "margin-right": "200px",
+            "font-size": "20px",
+            "padding": "10px"
+            
+            });
+            $(".heading").css({
+                "color": "white"
+            })
+        });
+    </script>
+    </body>
+    </html>

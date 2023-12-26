@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .conteiner {
+            width: 1100px;
+            margin: 0 auto;
+            color: black;
+            position: relative;
+            /* border: solid 2px; */
+        }
+
+        section {
+            background-color: khaki;
+            height: 800px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border: solid 2px;
+        }
+
+        .links ul li {
+            display: inline-block;
+
+        }
+        .demolinks{
+            position: absolute;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            margin: 0 20px;
+            font-size: 30px;
+        }
+
+        .demolinks {
+            width: 300px;
+            border: solid 2px;
+            background-color: orange;
+            color: white;
+            font-size: 10px;
+            display: none;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <section>
+
+        <div class="conteiner">
+            <nav class="row">
+                <div class="logo">
+                    <h1>logo</h1>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="#" class="home">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>icon</h2>
+                </div>
+            </nav>
+            <div class="demolinks">
+                <ul>
+                    <li><a href="#">demo</a></li>
+                    <li><a href="#">demo</a></li>
+                    <li><a href="#">demo</a></li>
+                    <li><a href="#">demo</a></li>
+                    <li><a href="#">demo</a></li>
+                </ul>
+            </div>
+        </div>
+    <h1>test</h1>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $(".home").mouseenter(function(){
+              $(".demolinks").slideDown(3000)
+            })
+            $(".home").mouseleave(function(){
+              $(".demolinks").slideUp(3000)
+            })
+        })
+    </script>
+</body>
+
+</html>

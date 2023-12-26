@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            background-color: crimson;
+
+        }
+        /* #box:hover{
+            background-color: green;
+
+        } */
+
+        .bg {
+            background-color: green;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+</head>
+
+<body>
+
+    <div id="box">
+
+    </div>
+    <button id="add">add</button>
+
+    <script>
+        $('#box').mouseenter(function () {
+            console.log("data");
+            $("#box").css({
+                backgroundColor: "green",
+                cursor: "auto",
+
+            })
+        })
+
+        $("#box").mouseleave(function(){
+            $(this).css({
+                padding : "20px",
+                backgroundColor: "crimson",
+            })
+        })
+        // $("#add").mouseenter(function () {
+        //     console.log("add");
+        //     $("#add").css({
+        //         // "background-color": "green"
+        //         backgroundColor: "green",
+        //       color : "white"
+        //     })
+        // })
+        // $('#add').mouseleave(function () {
+        //     // alert('you are not in box')
+        //     $("#add").css({
+        //         // "background-color": "green"
+        //         backgroundColor: "red",
+        //         color : "red"
+
+
+        //     })
+        // })
+    </script>
+</body>
+
+</html>

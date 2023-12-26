@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        .bg{
+            background-color: brown;
+        }
+    </style>
+
+</head>
+<body>
+    <p id="pre">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, odio deleniti consequatur dolor ipsam perspiciatis eum minus earum? Assumenda, vitae laboriosam. Suscipit ab repudiandae, obcaecati corrupti esse neque vero eveniet?</p>
+
+    <script>
+        $(document).ready(function(){
+          $("#pre").mouseenter(function () {
+              console.log("you enter the pre")
+          })
+          $("#pre").mouseleave(function () {
+            console.log("your not  enter the  pre")
+          })
+        });
+    </script>
+</body>
+</html>
