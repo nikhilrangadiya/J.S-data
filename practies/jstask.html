@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jstask</title>
+    <style>
+        .box {
+            border: solid 2px;
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="color" placeholder="Enter color name">
+    <!-- <input type="text" id="borderRadiusInput" placeholder="Enter border radius (%)"> -->
+    <div class="box" id="coloredBox"></div>
+
+    <script>
+        const colorInput = document.getElementById('color');
+        const borderRadiusInput = document.getElementById('borderRadiusInput');
+        const coloredBox = document.getElementById('coloredBox');
+
+        colorInput.addEventListener('input', function () {
+            coloredBox.style.backgroundColor = colorInput.value;
+            coloredBox.style.borderRadius = colorInput.value;
+        });
+
+        borderRadiusInput.addEventListener('input', function () {
+            const borderRadiusValue = borderRadiusInput.value + '%';
+            coloredBox.style.borderRadius = borderRadiusValue;
+        });
+    </script>
+</body>
+
+</html>
