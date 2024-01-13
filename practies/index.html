@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form Validation</title>
+    <style>
+        table {
+            width: 70%;
+        }
+        body {
+            background-color: rgb(192, 192, 192);
+        }
+
+        .wth {
+            width: 80%;
+            padding: 6px;
+        }
+
+        textarea {
+            font-size: 16px;
+        }
+        
+        input {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        select {
+            width: 30%;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        #submit {
+            padding: 7px;
+            background-color: rgb(127, 255, 136);
+            color: rgb(71, 71, 71);
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 2px;
+            border-color: greenyellow;
+            margin-top: 18px;
+        }
+
+        label {
+            font-size: 17px;
+        }
+        
+    </style>
+</head>
+
+<body>
+  
+    <form onsubmit="registration()">
+        <table>
+            <tr>
+                <td><label for="fname">First Name:</label></td>
+                <td><input type="text" placeholder="First name" id="fname" class="wth"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="p1"></span></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last Name:</label></td>
+                <td><input type="text" placeholder="Last Name" class="wth" id="lname"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="p2"></span></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email-id:</label></td>
+                <td><input type="email" placeholder="Email" id="email" class="wth"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="p3"></span></td>
+            </tr>
+            <tr>
+                <td><label for="mobnum">Mobile No:</label></td>
+                <td><input type="tel" placeholder="Mobile No" id="mobnum" class="wth"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="p4"></span></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td>
+                    <label for="Male">Male:</label>
+                    <input type="radio" name="radio" id="Male">
+
+                    <label for="Female">Female:</label>
+                    <input type="radio" name="radio" id="Female">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="Dofbirth"></label>Date of Birth:</td>
+                <td><input type="date" name="date" id="date" class="wth"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="p5"></span></td>
+            </tr>
+            <tr>
+                <td><label for="Address">Address:</label></td>
+                <td><textarea name="text" id="Address" cols="50" rows="6" placeholder="Address" class="wth"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="p6"></span></td>
+            </tr>
+            <tr>
+                <td><label for="inputCity">City:</label></td>
+                <td><input type="text" id="inputCity" placeholder="City" class="wth"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="p7"></span></td>
+            </tr>
+            <tr>
+                <td><label for="pin">Area PIN:</label></td>
+                <td><input type="text" id="pin" placeholder="Area PIN" class="wth"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="p8"></span></td>
+            </tr>
+            <tr>
+                <td><label for="inputstate">State:</label></td>
+                <td><input type="text" id="inputstate" placeholder="State" class="wth"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="p9"></span></td>
+            </tr>
+            <tr>
+                <td><label for="Qualification">Qualification:</label></td>
+                <td>
+                    <select class="Qualification-select" selected class="wth">
+                        <option selected>Select Qualification</option>
+                        <option value="1">10th</option>
+                        <option value="2">12th</option>
+                        <option value="3">B.com</option>
+                        <option value="4">M.com</option>
+                        <option value="5">Bca</option>
+                        <option value="6">Mca</option>
+                        <option value="6">Bsc</option>
+                        <option value="6">Msc</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="specialization">Specialization:</label></td>
+                <td>
+                    <input type="checkbox" name="checkbox" id="cs">
+                    <label for="cs">Computer Science</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" name="checkbox" id="it">
+                    <label for="it">Information Technology</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" name="checkbox" id="ca">
+                    <label for="ca">Computer Architechture</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" name="checkbox" id="tc">
+                    <label for="tc">Tele Communication</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" name="password" id="password" placeholder="Password" class="wth"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><span id="p10"></span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Register" id="submit"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

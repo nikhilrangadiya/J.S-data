@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        section {
+            padding: 20px;
+            border: 2px solid red;
+            transition:  20s;
+        }
+
+        .div{
+            border: 2px solid red;
+            padding: 18px;
+            width: 50%;
+            transition: 15s;
+        }
+        .min {
+            border: 2px solid red;
+            padding: 13px 25px;
+            transition:  8s;
+        }
+
+        ul {
+            border: 2px solid red;
+            padding: 20px;
+            transition:  5s;
+        }
+
+        li {
+            border: 2px solid red;
+            padding: 10px;
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        Body
+    <div class="div">
+        Div
+        <div class="min">
+            Min
+            <ul>
+                ul
+                <li>li</li>
+            </ul>
+        </div> 
+    </div>
+</section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function (){
+           $('section').click(function () {
+            alert('body is selected')
+            $(this).css("background-color",'darkorange')
+           })
+
+
+           $('.div').click(function () {
+            alert('div is selected')
+            $(this).css("background-color",'lightyellow')
+           })
+
+
+           $('.min').click(function (e) {
+            alert('min is selected')
+            $('.min').css("background-color",'green')
+           })
+
+
+
+           $('ul').click(function () {
+            alert('ul is selected')
+            $('ul').css("background-color",'dodgerblue')
+           })
+
+
+
+           $('li').click(function (e) {
+            // e.stopPropagation()
+            alert('li is selected')
+            $('li').css("background-color",'paleturquoise')
+           })
+        })
+
+    </script>
+</body>
+
+</html>
